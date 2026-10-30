@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TaskBoard</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body data-unsafe-render="{{ '1' if unsafe_render else '0' }}">
+  <main>
+    <header>
+      <h1>TaskBoard</h1>
+      <span id="current-user"></span>
+      <button id="logout" type="button">Sign out</button>
+    </header>
+    <form id="task-form">
+      <label for="task-title">New task</label>
+      <input id="task-title">
+      <button type="submit">Add</button>
+    </form>
+    <p id="error" role="alert"></p>
+    <ul id="tasks"></ul>
+    <section id="admin-panel" hidden>
+      <h2>Users</h2>
+      <ul id="users"></ul>
+    </section>
+  </main>
+  <script src="/static/board.js"></script>
+</body>
+</html>
